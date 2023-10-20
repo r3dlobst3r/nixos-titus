@@ -27,11 +27,11 @@ nix.settings = {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos-studio"; # Define your hostname.
+  networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
-  time.timeZone = "America/Chicago";
+  time.timeZone = "America/NewYork";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -50,7 +50,7 @@ nix.settings = {
 	lightdm.enable = true;
   	autoLogin = {
 		enable = true;
-		user = "titus";
+		user = "andrew";
 	};
   };
 services.xserver.displayManager.setupCommands = ''
@@ -63,7 +63,7 @@ services.xserver.displayManager.setupCommands = ''
   hardware.pulseaudio.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.titus = {
+  users.users.andrew = {
      isNormalUser = true;
      extraGroups = [ "wheel" "kvm" "input" "disk" "libvirtd" ]; # Enable ‘sudo’ for the user.
   };
@@ -75,7 +75,7 @@ services.xserver.displayManager.setupCommands = ''
 	wget
 	w3m
 	dmenu
-  neofetch
+  	neofetch
 	neovim
 	autojump
 	starship
@@ -83,9 +83,7 @@ services.xserver.displayManager.setupCommands = ''
 	bspwm
 	cargo
 	celluloid
-	chatterino2
-  clang-tools_9
-	davinci-resolve
+	clang-tools_9
 	dwm
 	dunst
 	elinks
@@ -93,8 +91,8 @@ services.xserver.displayManager.setupCommands = ''
 	feh
 	flameshot
 	flatpak
-  fontconfig
-  freetype
+  	fontconfig
+  	freetype
 	gcc
 	gh
 	gimp
@@ -103,10 +101,9 @@ services.xserver.displayManager.setupCommands = ''
 	gnugrep
 	gnumake
 	gparted
-	hugo
 	kitty
 	libverto
-  luarocks
+  	luarocks
 	lutris
 	mangohud
 	neovim
@@ -141,11 +138,11 @@ services.xserver.displayManager.setupCommands = ''
 	xclip
 	xdg-desktop-portal-gtk
 	xfce.thunar
-  xorg.libX11
-  xorg.libX11.dev
-  xorg.libxcb
-  xorg.libXft
-  xorg.libXinerama
+  	xorg.libX11
+  	xorg.libX11.dev
+  	xorg.libxcb
+  	xorg.libXft
+  	xorg.libXinerama
 	xorg.xinit
   xorg.xinput
 	(lutris.override {
@@ -243,6 +240,6 @@ fonts = {
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.11"; # Did you read the comment?
+  system.stateVersion = "23.05"; # Did you read the comment?
 
 }
