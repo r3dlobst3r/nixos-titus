@@ -156,7 +156,7 @@ services.xserver.displayManager.setupCommands = ''
 
   nixpkgs.overlays = [
 	(final: prev: {
-		dwm = prev.dwm.overrideAttrs (old: { src = /home/titus/GitHub/dwm-titus ;});
+		dwm = prev.dwm.overrideAttrs (old: { src = $HOME/github/dwm-titus ;});
 	})
   ];
   
